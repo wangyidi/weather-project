@@ -6,9 +6,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Global Weather</title>
-	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-	<script type="text/javascript" src="static/js/jquery.min.js"></script>
-	
 	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 	<%
@@ -16,7 +13,8 @@
 
 		List<String> cityList = (List<String>)request.getAttribute("weatherList");
 	%>
-	
+	<link rel="stylesheet" type="text/css" href="<%=path %>/static/css/style.css">
+	<script type="text/javascript" src="<%=path %>/static/js/jquery.min.js"></script>
 </head>
 <body>
     <h1>Global Weather</h1>

@@ -144,12 +144,12 @@ public class HttpClient {
     }
     
     
-    public static void main(String[] args) {
-    	
-		String a= HttpClient.doGet("https://way.jd.com/he/freeweather?city=Sydney&appkey=d4890eb1ed6069a1b13309b7cf774b24");
-		
-		System.out.println(a);
-	}
-    
+//    public static void main(String[] args) {
+//    	
+//		String a= HttpClient.doGet("https://way.jd.com/he/freeweather?city=Sydney&appkey=d4890eb1ed6069a1b13309b7cf774b24");
+//		
+//		System.out.println(a);
+//	}
+//    
     
 }
