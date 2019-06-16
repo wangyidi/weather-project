@@ -2,6 +2,7 @@ package com.weather.business.schedule;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class TaskSchedule {
 		logger.info("start task ...");
 		String weather = serviceImp.weatherToString;
 		
-		List<String> list= Arrays.asList(weather.split(","));
+		List<String> list=Arrays.stream(weather.split(",")).collect(Collectors.toList());
 		
 		for (String cityName : list) {
 			

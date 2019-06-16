@@ -1,11 +1,11 @@
 package com.weather.business.service;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
@@ -51,7 +51,7 @@ public class WeatherServiceImp implements WeatherService{
 			
 			String[] weatherArray = weatherToString.split(",");
 			// string array to list
-			cityList = Arrays.asList(weatherArray);
+			cityList = Arrays.stream(weatherArray).collect(Collectors.toList());
 			String cityName = cityList.get(0);
 			
 			// get from cache 
