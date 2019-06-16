@@ -17,3 +17,6 @@ We need to build a web application to display current weather for 3 Australian c
 2.  Configuration your java version of 1.8.
 3.  Right-hand button -> run as application
 
+== show ==
+![image](https://github.com/wangyidi/weather-project/blob/master/display.png)
+
