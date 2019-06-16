@@ -23,9 +23,13 @@ public class TestWeatherService {
 	private WeatherService service;
 	
 	@Test
-    public void testGetEntFileById(){
-		
-
+    public void testGetEntFileById() throws Exception{
+		Assert.assertNotNull(service.getWeacherByCityName("beijing"));
+	}
+	
+	@Test
+    public void testetCityListAndFirstCityDetail() throws Exception{
+		Assert.assertNotNull(service.getCityListAndFirstCityDetail());
 	}
 	
 	@Test
