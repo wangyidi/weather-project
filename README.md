@@ -22,7 +22,7 @@ We need to build a web application to display current weather for 3 Australian c
 # show 
 
 1. Application link: http://47.105.195.101:9090/weather
-2. CI/CD Jenkins link: http://47.105.195.101:8088    user : root , pwd:root
+2. CI/CD Jenkins link: http://47.105.195.101:8088    username/password : root/root
 
 ![image](https://github.com/wangyidi/weather-project/blob/master/display.png)
 
