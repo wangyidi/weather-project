@@ -59,7 +59,7 @@ var path = '<%=path%>'
 $("#selector").change(function(){
 	
 	var url = path +'/weather/'+this.value;
-	$.post(url,{},function(result){
+	$.post(url,{},function(result,status){
 		var json = eval('(' + result + ')');
 		
 		$("#update_time").html(json.updated_time);
@@ -68,7 +68,12 @@ $("#selector").change(function(){
 		$("#wind").html(json.wind+' km/h');
 		$("#city").html(json.city);
 		
-     });
+     })
+     .error(function(error) { 
+    	 alert('code:'+ error.responseJSON.code+
+    			', more_info:'+ error.responseJSON.more_info
+    				+', msg:'+ error.responseJSON.msg)
+     })
 
 });
 
