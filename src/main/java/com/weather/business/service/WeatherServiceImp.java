@@ -74,7 +74,7 @@ public class WeatherServiceImp implements WeatherService{
 	}
 
 	@Override
-	public String getWeacherByCityName(String cityName) throws Exception{
+	public String getWeatherByCityName(String cityName) throws Exception{
 		//get from cache
 		logger.info(this.getClass().getSimpleName()+" getWeacherByCityName start..");
 		if(static_cityMap.get(cityName)!=null) {

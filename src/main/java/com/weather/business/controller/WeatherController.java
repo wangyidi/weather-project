@@ -30,7 +30,7 @@ public class WeatherController extends BaseResource{
 	 * @return ModelAndView
 	 */
 	@RequestMapping(value="/weather",method=RequestMethod.GET)
-	public ModelAndView  getWeacherList() throws Exception{
+	public ModelAndView  getWeatherList() throws Exception{
 		logger.info("getWeacherList ..start");
 		Map<String, Object> weatherMap = weatherService.getCityListAndFirstCityDetail();
 		
@@ -43,14 +43,14 @@ public class WeatherController extends BaseResource{
 	
 	@RequestMapping(value="/weather/{city_name}",method=RequestMethod.POST)
 	@ResponseBody
-	public Object  getWeacherListByCityName(HttpServletRequest request, HttpServletResponse response,@PathVariable(value="city_name") String cityName) throws Exception{
+	public Object  getWeatherListByCityName(HttpServletRequest request, HttpServletResponse response,@PathVariable(value="city_name") String cityName) throws Exception{
 		try {
-			logger.info("getWeacherByCityName ..start");
+			logger.info("getWeatherListByCityName ..start");
 			logger.info("city_name: "+ cityName);
-			String jsonObject = weatherService.getWeacherByCityName(cityName);
+			String jsonObject = weatherService.getWeatherByCityName(cityName);
 			return jsonObject;
 		 } catch (Exception e) {
-	         logger.error("getWeacherByCityName exception:", e);
+	         logger.error("getWeatherListByCityName exception:", e);
 	         return message(500, e.getMessage(), cityName, request, response, e);
 	     }
 	}

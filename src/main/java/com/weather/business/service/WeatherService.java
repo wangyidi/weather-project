@@ -6,5 +6,5 @@ public interface WeatherService {
 
 	public Map<String,Object> getCityListAndFirstCityDetail() throws Exception;
 	
-	public String getWeacherByCityName(String cityName) throws Exception;
+	public String getWeatherByCityName(String cityName) throws Exception;
 }
