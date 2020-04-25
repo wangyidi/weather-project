@@ -68,7 +68,15 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<!--<version>5.0.0.Alpha2</version>-->
+			 <version>4.1.24.Final</version>
+		</dependency>
+
 	</dependencies>
 	
 	<build>
